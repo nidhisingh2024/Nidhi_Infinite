@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Assignment
 {
-    class Strings_Solution
+    class Strings
+
     {
         public static void Main(String[] Args)
         {
-            Strings_Solution strings_solution = new Strings_Solution();
+            Strings strings_solution = new Strings();
             strings_solution.Func_of_String();
             strings_solution.String_Equals();
             Console.Read();
@@ -20,7 +21,7 @@ namespace Assignment
         {
             Console.WriteLine("Enter any String/Your Name : ");
             string s = Convert.ToString(Console.ReadLine());
-            //Length of the String
+            //Lenth of the String
             Console.WriteLine("The length of the given String is -> " + s.Length);
             //Reverse of the given string
             char[] rev = s.Reverse().ToArray();
@@ -28,7 +29,6 @@ namespace Assignment
             for (int i = 0; i < rev.Length; i++)
             {
                 Console.Write(rev[i]);
-
             }
 
         }
