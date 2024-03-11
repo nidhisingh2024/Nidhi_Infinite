@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34601.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consession", "Consession\Consession.csproj", "{B3502412-57C6-41DA-90EB-A8A78A0BEC43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3502412-57C6-41DA-90EB-A8A78A0BEC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3502412-57C6-41DA-90EB-A8A78A0BEC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3502412-57C6-41DA-90EB-A8A78A0BEC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3502412-57C6-41DA-90EB-A8A78A0BEC43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {203A92CF-04D2-4260-80AF-19AD7AE8A925}
+	EndGlobalSection
+EndGlobal
