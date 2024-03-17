@@ -1,9 +1,5 @@
 create database Exercise_2
 use Exercise_2
-
---Two tables to be created in the database that may be used for the following exercises. 
---Their structure is as follows:
-
 create table Employees
 (Empno numeric(4)unique,
 Ename varchar(20),
