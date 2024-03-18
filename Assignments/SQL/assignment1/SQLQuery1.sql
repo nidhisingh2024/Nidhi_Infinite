@@ -1,13 +1,13 @@
 create database ITclient
 use ITclient
 
---Department Table
+-- This is Department Table
 create table Department
 (Deptno numeric(2) primary key,
 Dname varchar(15) not null, 
 Loc varchar(20))
 
---Client Table
+-- This is Client Table
 create table Clients
 (Client_id numeric(4) primary key,
 Cname varchar(30) not null, 
@@ -16,7 +16,7 @@ Email varchar(30) unique,
 phone numeric(10),
 Business varchar(20))
 
---Employee Table
+-- This is Employee Table
 create table Employee 
 (Empno numeric(4) primary key,
 Ename varchar(20) not null,
@@ -24,7 +24,7 @@ job varchar(15),
 salary numeric(7),
 Deptno numeric(2) foreign key references department(Deptno))
 
---Project Table
+-- This is Project Table
 create table Project 
 (Project_ID numeric(3) primary key,
 Descr varchar(30) not null,
@@ -39,7 +39,7 @@ alter table Project
 add constraint CK_Actual_End_Date
 check(Actual_End_Date>Planned_End_Date)
 
---Employee Project Task Table
+-- This is Employee Project Task Table
 create table Emp_Project_Task(
 Project_ID numeric(3),
 Empno numeric(4),
@@ -51,7 +51,7 @@ primary key(Project_ID,Empno),
 foreign key (Project_ID)references Project(Project_ID),
 foreign key (Empno)references Employee(Empno))
 
---inserting client data
+--inserting client data into table
 insert into clients values
 (1001,'ACME utilities','Noida','Contact@acmeutil.com','9567880032','Manufacturing'),
 (1002,'Trackon Consultant','Mumbai','Consult@trackon.com','8734210090','Consultant'),
@@ -60,14 +60,14 @@ insert into clients values
 
 select * from clients
 
---inserting Department information
+--inserting Department information into table
 insert into Department values
 (10,'Design','Pune'),
 (20,'Development','pune'),
 (30,'Testing','Mumbai'),
 (40,'Document','Mumbai')
 
---inserting Employees data
+--inserting Employees data to table
 insert into Employee values
 (7001,'Sandeep','Analyst',25000,10),
 (7002,'Rajesh','Designer',30000,10),
@@ -81,7 +81,7 @@ insert into Employee values
 (7010,'Smita','Analyst',20000,10),
 (7011,'Anand','Project Mgr',65000,10)
 
---Project Information
+--Project Information 
 insert into Project values
 (401,'Inventory','2011-04-01','2011-10-01','2011-10-31',150000,1001),
 (402,'Accounting','2011-08-01','2012-01-01',null,150000,1002),
@@ -90,7 +90,7 @@ insert into Project values
 
 select * from project
 
---insert EmpProject task 
+--insert EmpProject task to table 
 insert into Emp_Project_Task values
 (401,7001,'2011-04-01','2011-04-20','System Analysis','Completed'),
 (401,7002,'2011-04-21','2011-05-30','System Design','Completed'),
