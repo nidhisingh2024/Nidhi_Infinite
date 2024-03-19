@@ -4,7 +4,7 @@ use ITclient
 -- This is Department Table
 create table Department
 (Deptno numeric(2) primary key,
-Dname varchar(15) not null, 
+Deptname varchar(15) not null, 
 Loc varchar(20))
 
 -- This is Client Table
@@ -30,26 +30,19 @@ create table Project
 Descr varchar(30) not null,
 Start_date date,
 Planned_End_Date date,
-Actual_End_Date date, 
+Actual_End_Date date check (Actual_End_Date>Planned_End_Date), 
 Budget numeric(10),
 Client_ID numeric(4) foreign key references Clients(client_Id))
 
---Adding constraint to date
-alter table Project 
-add constraint CK_Actual_End_Date
-check(Actual_End_Date>Planned_End_Date)
 
--- This is Employee Project Task Table
 create table Emp_Project_Task(
-Project_ID numeric(3),
-Empno numeric(4),
+Project_ID numeric(3) foreign key (Project_ID)references Project(Project_ID),
+Empno numeric(4)  foreign key (Empno)references Employee(Empno)),
 Start_Date date,
 End_Date date,
 Task varchar(25),
 Status varchar(15),
-primary key(Project_ID,Empno),
-foreign key (Project_ID)references Project(Project_ID),
-foreign key (Empno)references Employee(Empno))
+primary key (Project_ID,Empno)
 
 --inserting client data into table
 insert into clients values
